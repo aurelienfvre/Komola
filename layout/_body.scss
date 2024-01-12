@@ -1,0 +1,187 @@
+.our-services {
+    background-color: $background;
+    text-align: center;
+    padding: px-to-rem(60) 0;
+
+    .container {
+        max-width: px-to-rem(1200);
+        margin: 0 auto;
+        padding: px-to-rem(60);
+        background-color: #fff;
+        border-radius: px-to-rem(20) px-to-rem(20) 0 0;
+        box-shadow: 0px px-to-rem(4) px-to-rem(8) rgba(0, 0, 0, 0.1);
+        padding: px-to-rem(40);
+    }
+
+    h2 {
+        font-size: px-to-rem(36);
+        color: $color-text;
+        margin-bottom: px-to-rem(30);
+    }
+
+    .subtitle {
+        margin-bottom: px-to-rem(50);
+        color: $color-text-light;
+        font-size: px-to-rem(20);
+    }
+
+    .services-grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: px-to-rem(20);
+
+        .service-item {
+            background-color: #fff;
+            border-radius: px-to-rem(10);
+            padding: px-to-rem(40);
+            margin-bottom: px-to-rem(40);
+            flex: 0 1 calc(33.333% - px-to-rem(20));
+
+            img {
+                margin-bottom: px-to-rem(25);
+                width: px-to-rem(80);
+
+                &[src*="phone.png"] {
+                    width: px-to-rem(38);
+                }
+            }
+
+            h3 {
+                font-size: px-to-rem(24);
+                margin-bottom: px-to-rem(20);
+            }
+
+            p {
+                font-size: px-to-rem(18);
+            }
+        }
+    }
+    @include respond-to(mobile) {
+        .services-grid {
+          .service-item {
+            flex: 0 0 100%;
+            margin-bottom: px-to-rem(20);
+            padding: px-to-rem(20);
+    
+            img {
+              margin-bottom: px-to-rem(15);
+              width: px-to-rem(60);
+    
+              &[src*="phone.png"] {
+                width: px-to-rem(30);
+              }
+            }
+    
+            h3 {
+              font-size: px-to-rem(20);
+            }
+    
+            p {
+              font-size: px-to-rem(16);
+            }
+          }
+        }
+      }
+    }
+
+.video-section {
+    position: relative;
+    width: 100%;
+
+    .video-container {
+        position: relative;
+
+        .video-background {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .play-icon-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: px-to-rem(120);
+            height: px-to-rem(120);
+            cursor: pointer;
+            background-color: transparent;
+            border: px-to-rem(3) solid #fff;
+            border-radius: 50%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-90deg);
+                width: 0;
+                height: 0;
+                border-left: px-to-rem(20) solid transparent;
+                border-right: px-to-rem(20) solid transparent;
+                border-top: px-to-rem(30) solid #fff;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #1f2c33;
+            opacity: 0.8;
+            z-index: 1;
+        }
+    }
+}
+
+.solution-section {
+    position: relative;
+    background: url('images/header2.png') no-repeat center center;
+    background-size: cover;
+    height: px-to-rem(600);
+
+    .solution-overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #1f2c33;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .solution-content {
+        color: #ffffff;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .support-text {
+            font-size: px-to-rem(30);
+            background-color: #1f2c33;
+            display: inline-block;
+            color: #fff;
+        }
+
+        .main-heading {
+            font-size: px-to-rem(48);
+            margin-bottom: px-to-rem(30);
+            background-color: #1f2c33;
+            display: inline-block;
+            
+        }
+
+    }
+}
+    
+

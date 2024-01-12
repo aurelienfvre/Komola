@@ -1,0 +1,137 @@
+.pricing-section {
+    background-color: $background;
+    text-align: center;
+    padding: px-to-rem(60) 0;
+  
+    .container {
+      max-width: px-to-rem(1500);
+      margin: 0 auto;
+      padding: px-to-rem(60);
+      background-color: #fff;
+      box-shadow: 0px px-to-rem(4) px-to-rem(8) rgba(0, 0, 0, 0.1);
+      border-radius: 0 0 10px 10px;
+    }
+  
+    .pricing-title {
+      font-size: px-to-rem(36);
+      color: $color-primary;
+      margin-bottom: px-to-rem(20);
+    }
+  
+    .pricing-description {
+      margin-bottom: px-to-rem(40);
+      color: $color-text-light;
+    }
+  
+    .pricing-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: px-to-rem(20);
+    }
+  
+    .pricing-card {
+      position: relative;
+      background-color: #fff;
+      padding: px-to-rem(80) px-to-rem(40) px-to-rem(40);
+      margin-bottom: px-to-rem(30);
+      width: calc(25% - px-to-rem(20));
+      border: px-to-rem(1) solid $color-tertiary;
+      transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  
+      .plan-title {
+        font-size: px-to-rem(24);
+        color: $color-text;
+        position: absolute;
+        top: px-to-rem(10);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        padding: px-to-rem(10) 0;
+      }
+  
+      .plan-price {
+        position: absolute;
+        top: px-to-rem(60);
+        left: 0;
+        width: 100%;
+        font-size: px-to-rem(36);
+        color: $color-text;
+        background-color: $background-price;
+        padding: px-to-rem(10) 0;
+        transition: background-color 0.3s, color 0.3s;
+        font-weight: 600;
+  
+        .price-period {
+          font-size: px-to-rem(16);
+          color: $color-text;
+        }
+      }
+  
+      .plan-features {
+        list-style: none;
+        text-align: center;
+        margin-top: px-to-rem(140);
+        padding: px-to-rem(20) 0;
+  
+        li {
+          margin-bottom: px-to-rem(10);
+          color: $color-text-light;
+        }
+      }
+  
+      .plan-button {
+        background-color: $color-primary;
+        color: #fff;
+        border: none;
+        border-radius: px-to-rem(5);
+        padding: px-to-rem(10) px-to-rem(15);
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: px-to-rem(16);
+  
+        &:hover {
+          background-color: darken($color-primary, 10%);
+        }
+      }
+  
+      &:hover {
+        transform: translateY(-px-to-rem(10));
+        border-color: $color-primary;
+        border-radius: 0;
+        transform: scale(1.05);
+  
+        .plan-price {
+          background-color: $color-primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+  @include respond-to(mobile) {
+    .pricing-grid {
+      justify-content: center;
+
+      .pricing-card {
+        width: 100%;
+        margin-bottom: px-to-rem(20);
+        padding: px-to-rem(40) px-to-rem(20);
+
+        .plan-title,
+        .plan-price {
+          position: static;
+          transform: none;
+          width: auto;
+          padding: px-to-rem(10) 0;
+        }
+
+        .plan-features {
+          margin-top: px-to-rem(20);
+        }
+
+        .plan-button {
+          padding: px-to-rem(10) px-to-rem(20);
+        }
+      }
+    }
+  }

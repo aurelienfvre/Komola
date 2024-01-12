@@ -1,0 +1,28 @@
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $breakpoint-desktop) { @content; }
+  }
+}
+  
+
+  @mixin button-variant($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    &:hover {
+      background-color: darken($bg-color, 10%);
+    }
+  }
+
+  @mixin flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

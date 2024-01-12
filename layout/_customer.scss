@@ -1,0 +1,116 @@
+.customer-subscribe-section {
+  display: flex;
+
+  .customer-feedback, .subscribe {
+    flex: 1;
+    position: relative;
+    height: px-to-rem(600);
+    background-size: cover;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+
+      h2 {
+        font-size: px-to-rem(38);
+        margin-bottom: px-to-rem(30);
+        font-weight: 400;
+      }
+
+      blockquote {
+        font-size: px-to-rem(18);
+        max-width: px-to-rem(500);
+        height: px-to-rem(72);
+        overflow: hidden;
+        margin-bottom: px-to-rem(30);
+        font-style: italic;
+      }
+
+      .customer-image {
+        border-radius: 50%;
+        border: none;
+        width: px-to-rem(100);
+        height: px-to-rem(100);
+        object-fit: cover;
+      }
+    }
+  }
+
+  .subscribe {
+    background-image: url('images/client_push.jpeg');
+
+    .subscribe-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      input {
+        width: px-to-rem(500);
+        margin-bottom: px-to-rem(25);
+        padding: px-to-rem(20);
+        border: 1px solid #fff;
+        border-radius: px-to-rem(5);
+        background-color: transparent;
+        color: #fff;
+        font-size: px-to-rem(16);
+
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @include respond-to(mobile) {
+    flex-direction: column;
+
+    .customer-feedback,
+    .subscribe {
+      width: 100%;
+      height: auto;
+      padding: px-to-rem(30);
+
+      .overlay {
+        position: relative;
+        padding: px-to-rem(20);
+
+        h2 {
+          font-size: px-to-rem(24);
+        }
+
+        blockquote {
+          font-size: px-to-rem(16);
+          max-width: 100%;
+        }
+
+        .customer-image {
+          width: px-to-rem(80);
+          height: px-to-rem(80);
+        }
+      }
+    }
+
+    .subscribe {
+      .subscribe-form {
+        input {
+          width: calc(100% - px-to-rem(40));
+          margin-bottom: px-to-rem(15);
+        }
+
+        button {
+          width: calc(100% - px-to-rem(40));
+        }
+      }
+    }
+  }
+}

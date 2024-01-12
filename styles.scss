@@ -1,0 +1,18 @@
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/functions';
+@import 'partials/placeholders';
+
+@import 'partials/reset';
+@import 'partials/typography';
+@import 'partials/utilities';
+
+@import 'components/buttons';
+@import 'layout/price_cards';
+@import 'layout/projects';
+@import 'layout/customer';
+@import 'components/form';
+
+@import 'layout/header';
+@import 'layout/body';
+@import 'layout/footer';

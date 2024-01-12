@@ -1,0 +1,50 @@
+.contact-section {
+    padding: px-to-rem(60) 0;
+    background-color: $background;
+    text-align: center;
+
+    .container {
+        max-width: px-to-rem(1200);
+        margin: 0 auto;
+        padding: px-to-rem(60);
+        background-color: #fff;
+        border-radius: 0 0 px-to-rem(20) px-to-rem(20);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .contact-title {
+            margin-bottom: px-to-rem(30);
+            color: $color-primary;
+            font-size: px-to-rem(36);
+        }
+
+        .contact-description {
+            margin-bottom: px-to-rem(50);
+            color: #666;
+        }
+
+        .contact-form {
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: px-to-rem(20);
+
+                input[type="text"],
+                input[type="email"] {
+                    width: 48%;
+                    padding: px-to-rem(20);
+                    border: 1px solid #ccc;
+                    border-radius: px-to-rem(8);
+                }
+            }
+
+            textarea {
+                width: 100%;
+                padding: px-to-rem(10);
+                border: 1px solid #ccc;
+                border-radius: px-to-rem(5);
+                margin-bottom: px-to-rem(20);
+                height: px-to-rem(400);
+            }
+        }
+    }
+}
